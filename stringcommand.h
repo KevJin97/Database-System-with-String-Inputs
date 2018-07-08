@@ -11,15 +11,15 @@ class char_array
 	private:
 		char stringarray[64];			//initial input array
 		char *p_inputstring;			//holds actual length data
-		char **pp_database_string;		//allocate data database.cpp
+		//char **pp_database_string;		//allocate data database.cpp
 		int stringsize;					//holds array size to allocate memory
 	
 	public:
 		inline char_array();			//inline so other functions can call on it
 		inline ~char_array();
-		inline void getinput(char**);			//retrieves user input
+		inline void getinput(char**);	//retrieves user input
 		inline void grabline();			//retrieve line with whitespace included	NOT COMPLETE, may not need
-		inline int arraysize();	//returns size of string array
+		inline int arraysize();			//returns size of string array
 		inline void printinput();		//print input string
 };
 
@@ -31,13 +31,11 @@ inline char_array::char_array()			//constructor
 
 inline char_array::~char_array()		//destructor
 {
-	delete[] pp_database_string;
 	delete[] p_inputstring;
 }
 
 inline void char_array::getinput(char **pp_stringin)
 {
-	printf("Enter string: ");		//delete later
 	stringsize = 0;
 	scanf("%63s", stringarray);	//get input string
 
