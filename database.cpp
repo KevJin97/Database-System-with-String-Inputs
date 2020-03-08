@@ -15,13 +15,13 @@ int database()
 		char_array database_string;
 		char *p_inputstring;
 		printf("~%s $ ", basefilepath);
-		database_string.getinput(&p_inputstring);					//get input from user
+		database_string.getinput(p_inputstring);					//get input from user
 	
-		new_directory("mkdir", &p_inputstring, functionrun);
-		new_file("new", &p_inputstring, functionrun);
-		delete_file("del", &p_inputstring, functionrun);
-		change_directory("cd", &p_inputstring, &basefilepath, functionrun);
-		list("ls", &p_inputstring, &basefilepath, functionrun);
+		new_directory("mkdir", p_inputstring, functionrun);
+		new_file("new", p_inputstring, functionrun);
+		delete_file("del", p_inputstring, functionrun);
+		change_directory("cd", p_inputstring, basefilepath, functionrun);
+		list("ls", p_inputstring, basefilepath, functionrun);
 
 		if (strcmp(p_inputstring, "help") == 0)						//add documentation later
 		{

@@ -14,6 +14,8 @@ struct info	//change later
 	char *content;	//actual content
 };
 
+//turn pp_inputstring into char *&ref_inputstring and in main, push through direct pointer
+
 inline void new_directory(const char commandkey[], char **pp_inputstring, bool *functionrun)	//fix to create directory in database filepath (not system) later
 {
 	if (strcmp(commandkey, *pp_inputstring) == 0)
